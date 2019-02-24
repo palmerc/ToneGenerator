@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5l8-JO-ucZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tone Generator View Controller-->
+        <scene sceneID="XS3-Ix-xhn">
+            <objects>
+                <viewController id="5l8-JO-ucZ" customClass="ToneGeneratorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6a2-ki-QXU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minValue="40" maxValue="4000" translatesAutoresizingMaskIntoConstraints="NO" id="wUi-bG-bfh">
+                                <rect key="frame" x="42" y="105" width="291" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="5l8-JO-ucZ" eventType="valueChanged" id="Dwr-vM-qxj"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Frequency:" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="opu-Hw-oMk">
+                                <rect key="frame" x="44" y="64" width="85.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="440 Hz" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YKU-H1-kEI">
+                                <rect key="frame" x="274" y="64" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esd-Fg-NL8">
+                                <rect key="frame" x="44" y="151" width="287" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="togglePlay:" destination="5l8-JO-ucZ" eventType="touchUpInside" id="ic0-SS-0Pb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="opu-Hw-oMk" firstAttribute="top" secondItem="nQo-ly-YVn" secondAttribute="top" constant="44" id="1oF-jL-iT4"/>
+                            <constraint firstItem="Esd-Fg-NL8" firstAttribute="leading" secondItem="nQo-ly-YVn" secondAttribute="leading" constant="44" id="5L1-HI-RTp"/>
+                            <constraint firstItem="wUi-bG-bfh" firstAttribute="leading" secondItem="nQo-ly-YVn" secondAttribute="leading" constant="44" id="7Yz-63-0uk"/>
+                            <constraint firstItem="nQo-ly-YVn" firstAttribute="trailing" secondItem="wUi-bG-bfh" secondAttribute="trailing" constant="44" id="Bo0-qD-mpY"/>
+                            <constraint firstItem="opu-Hw-oMk" firstAttribute="leading" secondItem="nQo-ly-YVn" secondAttribute="leading" constant="44" id="CgJ-gT-oaF"/>
+                            <constraint firstItem="Esd-Fg-NL8" firstAttribute="top" secondItem="wUi-bG-bfh" secondAttribute="bottom" constant="16" id="FQK-NR-p6t"/>
+                            <constraint firstItem="wUi-bG-bfh" firstAttribute="top" secondItem="opu-Hw-oMk" secondAttribute="bottom" constant="20" id="NU6-Zn-Ng0"/>
+                            <constraint firstItem="nQo-ly-YVn" firstAttribute="trailing" secondItem="Esd-Fg-NL8" secondAttribute="trailing" constant="44" id="Sav-mA-HGq"/>
+                            <constraint firstItem="YKU-H1-kEI" firstAttribute="top" secondItem="nQo-ly-YVn" secondAttribute="top" constant="44" id="s4j-c4-62L"/>
+                            <constraint firstItem="nQo-ly-YVn" firstAttribute="trailing" secondItem="YKU-H1-kEI" secondAttribute="trailing" constant="44" id="wBy-yX-IjT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nQo-ly-YVn"/>
+                    </view>
+                    <connections>
+                        <outlet property="frequencyLabel" destination="YKU-H1-kEI" id="0Pi-rf-hlg"/>
+                        <outlet property="frequencySlider" destination="wUi-bG-bfh" id="EIc-jR-8N5"/>
+                        <outlet property="playButton" destination="Esd-Fg-NL8" id="j7U-dR-H8N"/>
+                        <outlet property="view" destination="6a2-ki-QXU" id="bRf-Za-djk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bsu-6d-lFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-579" y="-142"/>
+        </scene>
+    </scenes>
+</document>
